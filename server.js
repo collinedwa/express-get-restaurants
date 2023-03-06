@@ -10,7 +10,7 @@ const port = 3000;
 app.get("/restaurants", async (request, response) => {
     restaurantList = await Restaurant.findAll();
 
-    response.send(JSON.stringify(restaurantList));
+    response.json(restaurantList);
 })
 
 
