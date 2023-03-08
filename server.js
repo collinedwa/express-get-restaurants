@@ -1,8 +1,10 @@
 const express = require("express");
+const {check, validationResult} = require("express-validator");
 const app = express();
 const {Restaurant} = require("./models/index")
 const {sequelize} = require("./db");
 const restaurantRoutes = require("./routes/restaurantRoutes");
+
 
 const port = 3000;
 app.use(express.json());
